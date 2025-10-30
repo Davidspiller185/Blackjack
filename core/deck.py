@@ -6,8 +6,8 @@ def build_standard_deck() -> list[dict]:#יוצר חבילת קלפים
     cards_degree=["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
     lst=[]
     for i in range(len(type_cards)):
-        dic={}
         for j in range(len(cards_degree)):
+            dic={}
             dic["rank"]=cards_degree[j]
             dic["suit"]=type_cards[i]
             lst.append(dic)
