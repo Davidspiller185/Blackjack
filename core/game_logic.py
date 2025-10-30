@@ -51,11 +51,12 @@ def run_full_game(deck: list[dict], player: dict, dealer: dict) -> None:
             hand_value_player=calculate_hand_value(player["hand"])
             if hand_value_player>21:
                 print("The game is cancelled ")
-                break
+                return
             else:
                 player_action = player_io.ask_player_action()
     if player_action=="S":
         play_dealer=dealer_play(deck, dealer)
+        print(play_dealer)
         if play_dealer and hand_value_player<=21:
             sum_hand_dealer=calculate_hand_value(player["hand"])
             hand_value_player=calculate_hand_value(player["hand"])
